@@ -60,8 +60,8 @@ class plgJoomGalleryJoomLightbox2 extends JoomOpenImagePlugin
     JHtml::_('jquery.framework');
 
     $doc = JFactory::getDocument();
-    $doc->addScript(JUri::root().'media/plg_joomlightbox2/js/lightbox.js');
-    $doc->addStylesheet(JUri::root().'media/plg_joomlightbox2/css/lightbox.css');
+    $doc->addScript(JUri::root().'media/plg_joomlightbox2/js/lightbox'.(JFactory::getConfig()->get('debug') ? '' : '.min').'.js');
+    $doc->addStylesheet(JUri::root().'media/plg_joomlightbox2/css/lightbox'.(JFactory::getConfig()->get('debug') ? '' : '.min').'.css');
   }
 
   /**
